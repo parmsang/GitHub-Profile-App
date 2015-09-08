@@ -1,0 +1,26 @@
+{
+  "name": "GitHub-Profile-App",
+  "version": "0.0.0",
+  "description": "A simple GitHub Profile app purely in JavaScript that grabs data from the Github API in order to display a specified users avatar, number of followers and number of repos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajitsy/GitHub-Profile-App.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ajitsy/GitHub-Profile-App/issues"
+  },
+  "devDependencies": {
+    "karma": "~0.13.9",
+    "jasmine-core": "~2.3.4",
+    "karma-jasmine": "~0.3.6",
+    "karma-chrome-launcher": "~0.2.0",
+    "phantomjs": "~1.9.18",
+    "karma-phantomjs-launcher": "~0.2.1"
+  }
+}
