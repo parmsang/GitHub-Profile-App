@@ -22,7 +22,8 @@
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "~1.9.18",
-    "phantomjs-polyfill": "0.0.1"
+    "phantomjs-polyfill": "0.0.1",
+    "protractor": "~2.2.0"
   },
   "homepage": "https://github.com/ajitsy/GitHub-Profile-App",
   "directories": {
@@ -34,6 +35,7 @@
     "karma-chrome-launcher": "^0.2.0",
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
-    "phantomjs": "^1.9.18"
+    "phantomjs": "^1.9.18",
+    "http-server": "~0.8.0"
   }
 }
