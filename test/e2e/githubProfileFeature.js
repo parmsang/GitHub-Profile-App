@@ -1,11 +1,19 @@
+var mock = require('protractor-http-mock');
+
 describe('GitHub profile finder', function() {
 
   var searchBox = element(by.model('searchCtrl.searchTerm'));
   var searchButton = element(by.className('btn'));
 
   beforeEach(function() {
+    mock(['githubUserSearch.js']);
+  });
+
+  beforeEach(function() {
     browser.get('http://localhost:8080');
   });
+
+
 
   xit('has a title', function() {
     expect(browser.getTitle()).toEqual('Github user search');
@@ -19,7 +27,6 @@ describe('GitHub profile finder', function() {
     expect(profiles.last().getText()).toEqual('spike01');
   });
 
-
   xit('counts the number of spikes', function() {
     searchBox.sendKeys('spike');
     searchButton.click();
@@ -29,21 +36,22 @@ describe('GitHub profile finder', function() {
   });
 
   it('initialises with an empty search result and term', function() {
-
     expect(element(by.model('searchCtrl.searchTerm')).getText()).toEqual('');
     expect(element.all(by.repeater('searchCtrl.searchResult.items')).count()).toEqual(0);
 
   });
 
-
   it('displays search results', function() {
-    element(by.model('searchCtrl.searchTerm')).sendKeys('spike01');
+    expect(element.all(by.repeater('searchCtrl.searchResult.items')).count()).toEqual(0);
+    element(by.model('searchCtrl.searchTerm')).sendKeys('ptolemybarnes');
     element(by.className('btn')).click();
     expect(element.all(by.repeater('searchCtrl.searchResult.items')).count()).toBeGreaterThan(0);
 
   });
 
-
+  afterEach(function(){
+    mock.teardown();
+  });
 
   //
   //

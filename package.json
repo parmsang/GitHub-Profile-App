@@ -23,7 +23,8 @@
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "~1.9.18",
     "phantomjs-polyfill": "0.0.1",
-    "protractor": "~2.2.0"
+    "protractor": "~2.2.0",
+    "protractor-http-mock": "~0.1.17"
   },
   "homepage": "https://github.com/ajitsy/GitHub-Profile-App",
   "directories": {
