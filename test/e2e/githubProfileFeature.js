@@ -36,6 +36,15 @@ describe('GitHub profile finder', function() {
   });
 
 
+  it('displays search results', function() {
+    element(by.model('searchCtrl.searchTerm')).sendKeys('spike01');
+    element(by.className('btn')).click();
+    expect(element.all(by.repeater('searchCtrl.searchResult.items')).count()).toBeGreaterThan(0);
+
+  });
+
+
+
   //
   //
   // it('finds profiles', function() {
